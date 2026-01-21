@@ -2,72 +2,118 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: 'Satoshi';
-  src: url('/fonts/satoshi/Satoshi-Variable.ttf') format('truetype');
-  font-weight: 300 900;
-  font-style: normal;
-  font-display: swap;
-}
-
-:root {
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.141 0.005 285.823);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.141 0.005 285.823);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.141 0.005 285.823);
-  --primary: oklch(0.21 0.006 285.885);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.967 0.001 286.375);
-  --secondary-foreground: oklch(0.21 0.006 285.885);
-  --muted: oklch(0.967 0.001 286.375);
-  --muted-foreground: oklch(0.552 0.016 285.938);
-  --accent: oklch(0.967 0.001 286.375);
-  --accent-foreground: oklch(0.21 0.006 285.885);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.92 0.004 286.32);
-  --input: oklch(0.92 0.004 286.32);
-  --ring: oklch(0.705 0.015 286.067);
-  
-  /* Custom brand colors */
-  --medgate-light-orange: #f36f21;
-  --medgate-orange: #f85814;
-  --medgate-grey: #6d6e71;
-  --medgate-grey-text: #727272;
-  --medgate-main-grey: #3d3936;
-  
-  --radius: 0.625rem;
-}
-
-.dark {
-  --background: oklch(0.141 0.005 285.823);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.21 0.006 285.885);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.21 0.006 285.885);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.92 0.004 286.32);
-  --primary-foreground: oklch(0.21 0.006 285.885);
-  --secondary: oklch(0.274 0.006 286.033);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.274 0.006 286.033);
-  --muted-foreground: oklch(0.705 0.015 286.067);
-  --accent: oklch(0.274 0.006 286.033);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.552 0.016 285.938);
-}
-
 @layer base {
-  * {
-    @apply border-border;
+  :root {
+    /* MedGate Colors from Figma Design */
+    --medgate-primary: #FF6B35;      /* Primary Orange from Figma */
+    --medgate-secondary: #2E86AB;    /* Blue color from Figma */
+    --medgate-accent: #00A896;       /* Teal accent */
+    --medgate-light: #F7F9FC;        /* Light background */
+    --medgate-dark: #1A202C;         /* Dark text/background */
+    --medgate-gray: #718096;         /* Gray for text */
   }
+}
 
-  body {
-    @apply bg-background text-foreground antialiased;
-    font-family: 'Satoshi', system-ui, -apple-system, sans-serif;
+@layer components {
+  /* Buttons */
+  .btn-primary {
+    @apply bg-[#FF6B35] hover:bg-[#E55A2B] text-white font-medium py-3 px-6 rounded-lg 
+           transition-all duration-200 focus:ring-2 focus:ring-[#FF6B35] focus:ring-opacity-50 
+           shadow-sm hover:shadow-md;
+  }
+  
+  .btn-secondary {
+    @apply bg-[#2E86AB] hover:bg-[#257395] text-white font-medium py-3 px-6 rounded-lg 
+           transition-all duration-200 focus:ring-2 focus:ring-[#2E86AB] focus:ring-opacity-50 
+           shadow-sm hover:shadow-md;
+  }
+  
+  .btn-outline {
+    @apply bg-white border border-[#FF6B35] text-[#FF6B35] hover:bg-[#FFF5F0] font-medium 
+           py-3 px-6 rounded-lg transition-all duration-200;
+  }
+  
+  /* Inputs */
+  .input-field {
+    @apply w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#2E86AB] 
+           focus:border-transparent outline-none transition-all shadow-sm;
+  }
+  
+  /* Cards */
+  .info-card {
+    @apply bg-white border-l-4 border-[#FF6B35] p-6 rounded-lg shadow-sm;
+  }
+  
+  .feature-card {
+    @apply bg-gradient-to-br from-[#F7F9FC] to-white p-6 rounded-xl border border-gray-100 
+           shadow-sm hover:shadow-md transition-shadow duration-200;
+  }
+  
+  /* Badges */
+  .badge-primary {
+    @apply bg-[#FF6B35] text-white px-3 py-1 rounded-full text-xs font-semibold;
+  }
+  
+  .badge-secondary {
+    @apply bg-[#2E86AB] text-white px-3 py-1 rounded-full text-xs font-semibold;
+  }
+  
+  /* Navigation */
+  .nav-link {
+    @apply text-gray-700 hover:text-[#FF6B35] font-medium transition-colors duration-200;
+  }
+  
+  .nav-link-active {
+    @apply text-[#FF6B35] font-semibold;
+  }
+  
+  /* Status Indicators */
+  .status-indicator {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium;
+  }
+  
+  .status-active {
+    @apply bg-green-100 text-green-800;
+  }
+  
+  .status-pending {
+    @apply bg-yellow-100 text-yellow-800;
+  }
+  
+  .status-completed {
+    @apply bg-blue-100 text-blue-800;
+  }
+}
+
+@layer utilities {
+  /* Text colors */
+  .text-medgate-primary {
+    color: #FF6B35;
+  }
+  
+  .text-medgate-secondary {
+    color: #2E86AB;
+  }
+  
+  /* Background colors */
+  .bg-medgate-primary {
+    background-color: #FF6B35;
+  }
+  
+  .bg-medgate-secondary {
+    background-color: #2E86AB;
+  }
+  
+  /* Gradients */
+  .gradient-medgate {
+    background: linear-gradient(135deg, #FF6B35 0%, #2E86AB 100%);
+  }
+  
+  .gradient-medgate-reverse {
+    background: linear-gradient(135deg, #2E86AB 0%, #FF6B35 100%);
+  }
+  
+  .gradient-light {
+    background: linear-gradient(135deg, #F7F9FC 0%, #FFFFFF 100%);
   }
 }

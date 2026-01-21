@@ -1,0 +1,43 @@
+{
+  "paymentInfo": {
+    "title": "MedGate Payment Portal",
+    "description": "Secure payment gateway for MedGate Healthcare Services",
+    "currency": "USD",
+    "minAmount": 10,
+    "maxAmount": 10000
+  },
+  "paymentMethods": [
+    {
+      "id": "credit_card",
+      "name": "Credit/Debit Card",
+      "icon": "💳",
+      "description": "Visa, MasterCard, American Express"
+    },
+    {
+      "id": "MobileMoney",
+      "name": "MobileMoney",
+      "icon": "🔗",
+      "description": "Secure online payments"
+    },
+    {
+      "id": "bank_transfer",
+      "name": "Bank Transfer",
+      "icon": "🏦",
+      "description": "Direct bank transfer"
+    }
+  ],
+  "usefulInfo": [
+    {
+      "title": "Secure Payment",
+      "description": "All transactions are encrypted and secure"
+    },
+    {
+      "title": "24/7 Support",
+      "description": "Contact our support team anytime"
+    },
+    {
+      "title": "Instant Confirmation",
+      "description": "Receive confirmation immediately after payment"
+    }
+  ]
+}
