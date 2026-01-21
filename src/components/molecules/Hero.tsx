@@ -25,6 +25,7 @@ export default function HeroSection() {
             index === currentSlide ? 'opacity-100' : 'opacity-0'
           }`}
         >
+          {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={slide.bgImage}
             alt="Hospital background"

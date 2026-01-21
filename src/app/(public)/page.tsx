@@ -161,6 +161,7 @@ const Home = () => {
                 </h2>
 
                 <div className="flex justify-center mb-8 md:mb-12">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src="/images/illustration1.png"
                     alt="Two medical professionals"
@@ -169,7 +170,7 @@ const Home = () => {
                 </div>
                 <p className="font-satoshi leading-relaxed text-sm font-medium mt-5 text-medgate-grey-text">
                   All partner hospitals are carefully screened to ensure quality, safety, and
-                  reliability. You can trust that you're receiving care from approved medical
+                  reliability. You can trust that you&apos;re receiving care from approved medical
                   providers.
                 </p>
               </div>
@@ -184,6 +185,7 @@ const Home = () => {
                     Pricing
                   </h3>
                   <div className="flex absolute top-6 md:top-10 right-6 md:right-10 justify-center items-end mt-auto">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src="/images/illustration2.png"
                       alt="Travel support"
@@ -206,6 +208,7 @@ const Home = () => {
                       Travel Support
                     </h3>
                     <div className="flex justify-center items-end mt-auto">
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img
                         src="/images/illustration3.png"
                         alt="Travel support"
@@ -223,6 +226,7 @@ const Home = () => {
                       Support
                     </h3>
                     <div className="flex justify-center items-center mt-auto">
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img
                         src="/images/illustration4.png"
                         alt="24/7 Support"

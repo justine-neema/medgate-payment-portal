@@ -19,6 +19,7 @@ export const Avatar: React.FC<AvatarProps> = ({
 
   return (
     <div className={`${sizeClasses[size]} w-12 h-12 rounded-full overflow-hidden ${className}`}>
+      {/* eslint-disable-next-line @next/next/no-img-element */}
       <img src={src} alt={alt} className="w-full h-full object-cover" />
     </div>
   );

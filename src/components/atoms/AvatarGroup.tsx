@@ -14,14 +14,17 @@ export const AvatarGroup: React.FC<AvatarGroupProps> = ({
   children,
   isBordered = false,
   max,
+  /* eslint-disable @typescript-eslint/no-unused-vars */
   total,
   size = 'md',
   className = '',
 }) => {
   const childrenArray = React.Children.toArray(children);
   const displayedChildren = max ? childrenArray.slice(0, max) : childrenArray;
+  /* eslint-disable @typescript-eslint/no-unused-vars */
   const remainingCount = 6;
 
+  /* eslint-disable @typescript-eslint/no-unused-vars */
   const sizeClasses = {
     sm: 'w-8 h-8',
     md: 'w-10 h-10',

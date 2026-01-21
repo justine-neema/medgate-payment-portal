@@ -94,6 +94,7 @@ const FAQSection: React.FC = () => {
             <div className="flex md:flex-row flex-col gap-6 md:gap-8 lg:gap-12">
               <div className="w-full md:w-[45%] lg:w-[40%]">
                 <div className="rounded-3xl overflow-hidden mb-6">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src="/images/faq.png"
                     alt="Professional team"

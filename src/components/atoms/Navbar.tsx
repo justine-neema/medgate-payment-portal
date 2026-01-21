@@ -6,6 +6,11 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Button } from '../ui/button';
 import { ChevronDown, Menu, X } from 'lucide-react';
 
+type SubLink = {
+  linkHref: string;
+  linkLabel: string;
+};
+
 const Navbar = () => {
   const pathname = usePathname();
   const [openDropdown, setOpenDropdown] = useState<number | null>(null);
@@ -14,7 +19,10 @@ const Navbar = () => {
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
+    // Close mobile menu when route changes
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setMobileMenuOpen(false);
+
     setMobileDropdownOpen(null);
   }, [pathname]);
 
@@ -29,7 +37,7 @@ const Navbar = () => {
     };
   }, [mobileMenuOpen]);
 
-  const isActiveLink = (linkHref: string, subLinks?: any[]) => {
+  const isActiveLink = (linkHref: string, subLinks?: SubLink[]) => {
     if (subLinks) {
       return subLinks.some((sub) => pathname === sub.linkHref) || pathname === linkHref;
     }
@@ -59,6 +67,7 @@ const Navbar = () => {
         <div className="flex flex-row justify-between w-full items-center">
           <div className="flex flex-row items-center space-x-4 md:space-x-8 lg:space-x-12">
             <div>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src="/logo.png" className="w-28 md:w-35 lg:w-50" alt="Medgate Logo" />
             </div>
 
@@ -127,7 +136,7 @@ const Navbar = () => {
             </ul>
           </div>
 
-          <Button className="bg-[#F85814] hover:bg-[#F85814]/90 text-white font-semibold text-base pr-[30px] pl-[30px] pt-[25px] pb-[25px] rounded-full transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 min-w-[160px]">
+          <Button className="hidden lg:block bg-[#F85814] hover:bg-[#F85814]/90 text-white font-semibold text-base pr-[30px] pl-[30px] pt-[25px] pb-[25px] rounded-full transition-all duration-300 hover:scale-105 min-w-[160px]">
             Get Started
           </Button>
 
@@ -159,6 +168,7 @@ const Navbar = () => {
       >
         <div className="flex flex-col h-full">
           <div className="flex items-center justify-between p-4 md:p-6 border-b border-gray-100">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src="/logo.png" className="w-24 md:w-28" alt="Medgate Logo" />
             <button
               onClick={() => setMobileMenuOpen(false)}
