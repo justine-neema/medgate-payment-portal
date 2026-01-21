@@ -136,7 +136,7 @@ const Navbar = () => {
             </ul>
           </div>
 
-          <Button className="hidden lg:block bg-[#F85814] hover:bg-[#F85814]/90 text-white font-semibold text-base pr-[30px] pl-[30px] pt-[25px] pb-[25px] rounded-full transition-all duration-300 hover:scale-105 min-w-[160px]">
+          <Button className="hidden lg:inline-block bg-[#F85814] hover:bg-[#F85814]/90 text-white font-semibold text-base pr-[30px] pl-[30px] pt-[25px] pb-[25px] rounded-full transition-all duration-300 hover:scale-105 min-w-[160px]">
             Get Started
           </Button>
 

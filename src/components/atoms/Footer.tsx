@@ -112,7 +112,7 @@ const Footer = () => {
       <div className="min-h-[60px] md:h-[80px] py-4 flex flex-col md:flex-row items-center justify-between gap-4 border-t-[1px] border-solid border-[#FFFFFF]/[20%]">
         <div>
           <p className="text-xs sm:text-sm font-medium text-center md:text-left text-medgate-grey-text">
-            &copy; {new Date().getFullYear()} Work nest. All rights reserved.
+            &copy; {new Date().getFullYear()} Medgate. All rights reserved.
           </p>
         </div>
         <div className="flex flex-row items-center space-x-4 md:space-x-8">
