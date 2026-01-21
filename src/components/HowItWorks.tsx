@@ -27,7 +27,7 @@ const MedGateLanding = () => {
       </nav>
 
       {/* Hero Section */}
-      <section className="bg-gray-800 text-white py-24 px-6">
+      <section className="bg-gray-600 text-white py-24 px-6">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-5xl font-bold mb-6">How MedGate Works</h2>
           <p className="text-gray-300 text-lg leading-relaxed">
@@ -248,8 +248,8 @@ const MedGateLanding = () => {
             </div>
 
             {/* Card 2 */}
-            <div className="bg-gray-50 rounded-xl p-6 border-l-4 border-gray-300">
-              <div className="w-10 h-10 bg-gray-400 text-white rounded-full flex items-center justify-center font-bold mb-4">
+            <div className="bg-gray-50 rounded-xl p-6 border-l-4 border-orange-500">
+              <div className="w-10 h-10 bg-orange-500 text-white rounded-full flex items-center justify-center font-bold mb-4">
                 2
               </div>
               <h4 className="text-xl font-bold mb-2">Arrange Logistics</h4>
@@ -259,8 +259,8 @@ const MedGateLanding = () => {
             </div>
 
             {/* Card 3 */}
-            <div className="bg-gray-50 rounded-xl p-6 border-l-4 border-gray-300">
-              <div className="w-10 h-10 bg-gray-400 text-white rounded-full flex items-center justify-center font-bold mb-4">
+            <div className="bg-gray-50 rounded-xl p-6 border-l-4 border-orange-500">
+              <div className="w-10 h-10 bg-orange-500 text-white rounded-full flex items-center justify-center font-bold mb-4">
                 3
               </div>
               <h4 className="text-xl font-bold mb-2">Confirm & Support</h4>
