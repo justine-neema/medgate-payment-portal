@@ -1,3 +1,3 @@
-import { getDefaultAvatarInitials } from "./common/common";
+import { getDefaultAvatarInitials } from './common/common';
 
-export { getDefaultAvatarInitials }
+export { getDefaultAvatarInitials };

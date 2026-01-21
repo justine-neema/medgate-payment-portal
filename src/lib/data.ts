@@ -71,7 +71,6 @@ export const heroSlides = [
   },
 ];
 
-
 export const hospitals = [
   {
     hospitalId: '1',
@@ -81,7 +80,8 @@ export const hospitals = [
     featured: true,
     price: 150000,
     services: ['Dental Procedures', 'Oral Surgery', 'Prosthodontics', 'Diagnostic & Imaging'],
-    hospitalLogo: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=200&h=200&fit=crop'
+    hospitalLogo:
+      'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=200&h=200&fit=crop',
   },
   {
     hospitalId: '2',
@@ -91,7 +91,7 @@ export const hospitals = [
     featured: true,
     price: 200000,
     services: ['Cardiology', 'Neurology', 'Oncology', 'Pediatrics'],
-    hospitalLogo: null
+    hospitalLogo: null,
   },
   {
     hospitalId: '3',
@@ -101,7 +101,8 @@ export const hospitals = [
     featured: false,
     price: 120000,
     services: ['Emergency Care', 'Surgery', 'Radiology', 'Laboratory'],
-    hospitalLogo: 'https://images.unsplash.com/photo-1586773860418-d37222d8fce3?w=200&h=200&fit=crop'
+    hospitalLogo:
+      'https://images.unsplash.com/photo-1586773860418-d37222d8fce3?w=200&h=200&fit=crop',
   },
   {
     hospitalId: '4',
@@ -111,7 +112,7 @@ export const hospitals = [
     featured: false,
     price: 180000,
     services: ['Internal Medicine', 'Obstetrics', 'General Surgery', 'Pharmacy'],
-    hospitalLogo: null
+    hospitalLogo: null,
   },
   {
     hospitalId: '5',
@@ -121,7 +122,8 @@ export const hospitals = [
     featured: true,
     price: 95000,
     services: ['Primary Care', 'Vaccination', 'Lab Tests', 'Consultation'],
-    hospitalLogo: 'https://images.unsplash.com/photo-1538108149393-fbbd81895907?w=200&h=200&fit=crop'
+    hospitalLogo:
+      'https://images.unsplash.com/photo-1538108149393-fbbd81895907?w=200&h=200&fit=crop',
   },
   {
     hospitalId: '6',
@@ -131,6 +133,6 @@ export const hospitals = [
     featured: false,
     price: 110000,
     services: ['Dermatology', 'Ophthalmology', 'ENT', 'Physiotherapy'],
-    hospitalLogo: null
-  }
+    hospitalLogo: null,
+  },
 ];

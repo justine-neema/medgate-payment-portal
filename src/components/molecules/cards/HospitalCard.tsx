@@ -43,6 +43,7 @@ const HospitalCard = ({
             </div>
           ) : (
             <div className="w-16 h-16 rounded-full flex items-center justify-center flex-shrink-0 border-2 border-gray-200">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 alt={`${hospitalName} Logo`}
                 className="w-full h-full rounded-full object-cover"
@@ -52,18 +53,14 @@ const HospitalCard = ({
           )}
 
           <div className="flex-1 min-w-0">
-            <h2 className="text-xl font-black text-black line-clamp-2">
-              {hospitalName}
-            </h2>
+            <h2 className="text-xl font-black text-black line-clamp-2">{hospitalName}</h2>
             <div className="flex items-center mt-1 space-x-1">
               <span className="text-lg font-black text-gray-700">{rating}</span>
             </div>
           </div>
         </div>
 
-        {/* Location, Featured, Rating, and Price Grid */}
         <div className="grid grid-cols-2 gap-4">
-          {/* Location */}
           <div className="flex flex-row items-center space-x-2">
             <svg
               className="w-5 h-5 flex-shrink-0"
@@ -78,7 +75,6 @@ const HospitalCard = ({
             </p>
           </div>
 
-          {/* Rating */}
           <div className="flex flex-row items-center space-x-2">
             <svg
               className="w-5 h-5 flex-shrink-0"
@@ -88,10 +84,11 @@ const HospitalCard = ({
             >
               <path d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z" />
             </svg>
-            <p className="text-xs sm:text-sm font-medium leading-relaxed text-gray-500 line-clamp-1">{rating}</p>
+            <p className="text-xs sm:text-sm font-medium leading-relaxed text-gray-500 line-clamp-1">
+              {rating}
+            </p>
           </div>
 
-          {/* Featured */}
           <div className="flex flex-row items-center space-x-2">
             <svg
               className="w-5 h-5 flex-shrink-0"
@@ -106,7 +103,6 @@ const HospitalCard = ({
             </p>
           </div>
 
-          {/* Price */}
           <div className="flex flex-row items-center space-x-2">
             <svg
               className="w-5 h-5 flex-shrink-0"
@@ -122,7 +118,6 @@ const HospitalCard = ({
           </div>
         </div>
 
-        {/* Services Tags */}
         <div className="flex flex-wrap gap-2">
           {services.slice(0, 4).map((service, index) => (
             <div
@@ -134,7 +129,6 @@ const HospitalCard = ({
           ))}
         </div>
 
-        {/* Learn More Button */}
         <Link href={`/hospital/${hospitalId}`}>
           <Button className="bg-[#F85814] cursor-pointer flex flex-row items-center hover:bg-[#F85814]/90 text-white font-semibold text-base pr-[10px] pl-[30px] pt-[25px] pb-[25px] rounded-full transition-all duration-300 hover:scale-105 min-w-[160px]">
             Contact us
