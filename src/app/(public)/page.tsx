@@ -1,9 +1,11 @@
 import Footer from '@/components/atoms/Footer';
 import Navbar from '@/components/atoms/Navbar';
+import HospitalCard from '@/components/molecules/cards/HospitalCard';
 import HeroSection from '@/components/molecules/Hero';
 import FAQSection from '@/components/organisms/FAQSection';
 import TestimonialsSection from '@/components/organisms/TestmonialsSection';
 import { Button } from '@/components/ui/button';
+import { hospitals } from '@/lib/data';
 import React from 'react';
 
 const Home = () => {
@@ -95,7 +97,7 @@ const Home = () => {
           Featured Hospitals
         </h1>
 
-        <div className="h-[300px] w-full flex justify-center items-center">
+        {/* <div className="h-[300px] w-full flex justify-center items-center">
           <div className="w-full flex flex-col items-center space-y-5 pl-4 pr-4 pt-8 pb-8 rounded-lg text-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -113,6 +115,12 @@ const Home = () => {
             </svg>
             <p className="text-sm font-medium text-app-gray-1/70">No featured hospitals</p>
           </div>
+        </div> */}
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-10">
+          {hospitals.map((hospital) => (
+            <HospitalCard key={hospital.hospitalId} {...hospital} />
+          ))}
         </div>
       </div>
 
