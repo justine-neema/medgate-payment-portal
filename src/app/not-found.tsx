@@ -32,7 +32,7 @@ const NotFound = () => {
             </Link>
             <Link href="/hospitals">
               <Button className="bg-[#757575] hover:bg-[#757575]/30 text-white font-semibold text-base pr-[30px] pl-[30px] pt-[25px] pb-[25px] rounded-full transition-all duration-300 border border-white/30 min-w-[160px]">
-                Browse Jobs
+                Browse Hospitals
               </Button>
             </Link>
           </div>
