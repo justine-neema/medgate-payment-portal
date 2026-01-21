@@ -7,6 +7,7 @@ const Footer = () => {
       <div className="flex flex-col lg:flex-row mb-6 gap-8 lg:gap-0 items-start">
         <div className="w-full lg:w-[30%]">
           <div>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/logo.png"
               className="w-28 md:w-35 lg:w-50 brightness-0 invert"

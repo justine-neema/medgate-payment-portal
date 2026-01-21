@@ -1,9 +1,8 @@
-import React from "react";
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import Navbar from "@/components/atoms/Navbar";
-import Footer from "@/components/atoms/Footer";
-
+import React from 'react';
+import Link from 'next/link';
+import { Button } from '@/components/ui/button';
+import Navbar from '@/components/atoms/Navbar';
+import Footer from '@/components/atoms/Footer';
 
 const NotFound = () => {
   return (
@@ -21,8 +20,8 @@ const NotFound = () => {
             Page Not Found
           </h2>
           <p className="mt-4 text-sm sm:text-md font-medium leading-relaxed text-gray-500">
-            Sorry, we couldn&apos;t find the page you&apos;re looking for. It
-            might have been moved or doesn&apos;t exist.
+            Sorry, we couldn&apos;t find the page you&apos;re looking for. It might have been moved
+            or doesn&apos;t exist.
           </p>
 
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">

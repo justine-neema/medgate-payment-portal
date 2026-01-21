@@ -1,5 +1,7 @@
 'use client';
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { useState, useEffect } from 'react';
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from '../ui/button';
 
@@ -78,6 +80,7 @@ export default function TestimonialsSection() {
         <div className="flex w-full flex-col lg:flex-row gap-4 md:gap-6 items-start lg:items-center">
           <div className="w-full lg:w-[30%] flex justify-center lg:justify-start">
             <div className="w-full max-w-[280px] sm:max-w-[320px] md:max-w-[348px] aspect-square rounded-2xl overflow-hidden transition-all duration-500">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 key={`img-${currentIndex}`}
                 src={testimonials[currentIndex].image}
