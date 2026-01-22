@@ -5,12 +5,12 @@
 @layer base {
   :root {
     /* MedGate Colors from Figma Design */
-    --medgate-primary: #FF6B35;      /* Primary Orange from Figma */
-    --medgate-secondary: #2E86AB;    /* Blue color from Figma */
-    --medgate-accent: #00A896;       /* Teal accent */
-    --medgate-light: #F7F9FC;        /* Light background */
-    --medgate-dark: #1A202C;         /* Dark text/background */
-    --medgate-gray: #718096;         /* Gray for text */
+    --medgate-primary: #ff6b35; /* Primary Orange from Figma */
+    --medgate-secondary: #2e86ab; /* Blue color from Figma */
+    --medgate-accent: #00a896; /* Teal accent */
+    --medgate-light: #f7f9fc; /* Light background */
+    --medgate-dark: #1a202c; /* Dark text/background */
+    --medgate-gray: #718096; /* Gray for text */
   }
 }
 
@@ -21,65 +21,65 @@
            transition-all duration-200 focus:ring-2 focus:ring-[#FF6B35] focus:ring-opacity-50 
            shadow-sm hover:shadow-md;
   }
-  
+
   .btn-secondary {
     @apply bg-[#2E86AB] hover:bg-[#257395] text-white font-medium py-3 px-6 rounded-lg 
            transition-all duration-200 focus:ring-2 focus:ring-[#2E86AB] focus:ring-opacity-50 
            shadow-sm hover:shadow-md;
   }
-  
+
   .btn-outline {
     @apply bg-white border border-[#FF6B35] text-[#FF6B35] hover:bg-[#FFF5F0] font-medium 
            py-3 px-6 rounded-lg transition-all duration-200;
   }
-  
+
   /* Inputs */
   .input-field {
     @apply w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#2E86AB] 
            focus:border-transparent outline-none transition-all shadow-sm;
   }
-  
+
   /* Cards */
   .info-card {
     @apply bg-white border-l-4 border-[#FF6B35] p-6 rounded-lg shadow-sm;
   }
-  
+
   .feature-card {
     @apply bg-gradient-to-br from-[#F7F9FC] to-white p-6 rounded-xl border border-gray-100 
            shadow-sm hover:shadow-md transition-shadow duration-200;
   }
-  
+
   /* Badges */
   .badge-primary {
     @apply bg-[#FF6B35] text-white px-3 py-1 rounded-full text-xs font-semibold;
   }
-  
+
   .badge-secondary {
     @apply bg-[#2E86AB] text-white px-3 py-1 rounded-full text-xs font-semibold;
   }
-  
+
   /* Navigation */
   .nav-link {
     @apply text-gray-700 hover:text-[#FF6B35] font-medium transition-colors duration-200;
   }
-  
+
   .nav-link-active {
     @apply text-[#FF6B35] font-semibold;
   }
-  
+
   /* Status Indicators */
   .status-indicator {
     @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium;
   }
-  
+
   .status-active {
     @apply bg-green-100 text-green-800;
   }
-  
+
   .status-pending {
     @apply bg-yellow-100 text-yellow-800;
   }
-  
+
   .status-completed {
     @apply bg-blue-100 text-blue-800;
   }
@@ -88,32 +88,32 @@
 @layer utilities {
   /* Text colors */
   .text-medgate-primary {
-    color: #FF6B35;
+    color: #ff6b35;
   }
-  
+
   .text-medgate-secondary {
-    color: #2E86AB;
+    color: #2e86ab;
   }
-  
+
   /* Background colors */
   .bg-medgate-primary {
-    background-color: #FF6B35;
+    background-color: #ff6b35;
   }
-  
+
   .bg-medgate-secondary {
-    background-color: #2E86AB;
+    background-color: #2e86ab;
   }
-  
+
   /* Gradients */
   .gradient-medgate {
-    background: linear-gradient(135deg, #FF6B35 0%, #2E86AB 100%);
+    background: linear-gradient(135deg, #ff6b35 0%, #2e86ab 100%);
   }
-  
+
   .gradient-medgate-reverse {
-    background: linear-gradient(135deg, #2E86AB 0%, #FF6B35 100%);
+    background: linear-gradient(135deg, #2e86ab 0%, #ff6b35 100%);
   }
-  
+
   .gradient-light {
-    background: linear-gradient(135deg, #F7F9FC 0%, #FFFFFF 100%);
+    background: linear-gradient(135deg, #f7f9fc 0%, #ffffff 100%);
   }
 }
