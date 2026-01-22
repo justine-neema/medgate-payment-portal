@@ -1,5 +1,5 @@
-import Link from 'next/link'
-import paymentData from '../../payment-data.json'
+import Link from 'next/link';
+import paymentData from '../../payment-data.json';
 
 export default function HomePage() {
   return (
@@ -9,7 +9,7 @@ export default function HomePage() {
           MedGate Healthcare Payment Portal
         </h1>
         <p className="text-gray-600 text-lg max-w-3xl mx-auto">
-          Welcome to MedGate&apos;s secure payment gateway. Make payments for medical services, 
+          Welcome to MedGate&apos;s secure payment gateway. Make payments for medical services,
           consultations, and healthcare packages securely.
         </p>
       </div>
@@ -25,9 +25,7 @@ export default function HomePage() {
 
       <div className="bg-white rounded-xl shadow-lg p-8 max-w-2xl mx-auto">
         <div className="text-center mb-8">
-          <h2 className="text-2xl font-bold text-[#0056a6] mb-3">
-            Ready to Make a Payment?
-          </h2>
+          <h2 className="text-2xl font-bold text-[#0056a6] mb-3">Ready to Make a Payment?</h2>
           <p className="text-gray-600 mb-6">
             Choose from multiple secure payment methods to complete your transaction.
           </p>
@@ -35,7 +33,10 @@ export default function HomePage() {
 
         <div className="space-y-4 mb-8">
           {paymentData.paymentMethods.map((method) => (
-            <div key={method.id} className="flex items-center p-4 border border-gray-200 rounded-lg hover:border-[#0056a6] transition-colors">
+            <div
+              key={method.id}
+              className="flex items-center p-4 border border-gray-200 rounded-lg hover:border-[#0056a6] transition-colors"
+            >
               <span className="text-2xl mr-4">{method.icon}</span>
               <div>
                 <h3 className="font-medium">{method.name}</h3>
@@ -47,9 +48,7 @@ export default function HomePage() {
 
         <div className="text-center">
           <Link href="/payment">
-            <button className="btn-primary text-lg px-8 py-4">
-              Proceed to Payment
-            </button>
+            <button className="btn-primary text-lg px-8 py-4">Proceed to Payment</button>
           </Link>
           <p className="text-sm text-gray-500 mt-4">
             You&apos;ll be redirected to our secure payment page
@@ -61,5 +60,5 @@ export default function HomePage() {
         <p>Need help? Contact our support team at payments@medgate.com</p>
       </div>
     </div>
-  )
+  );
 }
